@@ -1,8 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Josefin_Sans
+ } from "next/font/google";
 import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
+import localFont from 'next/font/local'
+
+const myFont = localFont({
+  src: './fonts/Opun Mai Medium SemiCondensed.ttf',
+  variable: '--font-opun-mai',
+  display: 'swap',
+})
+
+const JosefinSans = Josefin_Sans({
+  variable: "--font-josefin-sans",
+  subsets: ["latin"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
